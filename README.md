@@ -47,3 +47,9 @@ foreach (var k in regRange)
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 serialCom = ModbusClient(method='rtu', port='COM1', timeout=1, stopbits=1, bytesize=8, parity='N', baudrate=9600)
 ```
+
+## References & Extra reading
+1. http://easymodbustcp.net/en/modbusclient-methods
+2. http://easymodbustcp.net/python-modbusclient-methods
+3. https://pymodbus.readthedocs.io/en/latest/source/example/synchronous_client_ext.html
+4. https://buildmedia.readthedocs.org/media/pdf/pymodbus/latest/pymodbus.pdf
