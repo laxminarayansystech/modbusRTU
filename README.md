@@ -33,5 +33,11 @@ foreach (var k in regRange)
 ~~~~
 9. Compile & run the c# application. Check the *Modbus PLC Simulator* for written values, Check your application console for read values
 
-# python application
-- With python installed, at the terminal run *pip install pymodbus* to install modbus python api
+- python application
+1. With python installed, at the terminal run *pip install pymodbus* to install modbus python api
+2. From your python application, connect to COM1 port to communication with the PLC simulator which is connected to COM2 as seen above.
+3. You can download my python source code here
+```
+from pymodbus.client.sync import ModbusSerialClient as ModbusClient
+serialCom = ModbusClient(method='rtu', port='COM1', timeout=1, stopbits=1, bytesize=8, parity='N', baudrate=9600)
+```
